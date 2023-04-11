@@ -2,4 +2,5 @@
 SELECT t.TrackId, t.Name, t.Composer
 FROM tracks as t 
 LEFT JOIN invoice_items as ii on t.TrackId = ii.TrackId 
-WHERE ii.InvoiceLineId IS NULL;
+WHERE ii.InvoiceId IS NULL
+ORDER BY t.TrackId;
